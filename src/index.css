@@ -22,11 +22,26 @@
 
 :root {
   --primary: rgb(245, 101, 57);
-  --lightgreen: #f4fbf9;
+  --secondary: rgb(97, 53, 40);
+  --lightgreen: #999999;
+  --gray: #454545;
+  --black: rgb(33,33,33)
+  --light: rgb(234,234,234)
   --primaryFont: "Poppins", sans-serif;
   --secondaryFont: "Inter", sans-serif;
   --leageFont: "League Spartan", sans-serif;
   --victorFont: "Victor Mono", monospace;
 
   background-color: rgb(33, 33, 33);
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
 }

@@ -1,0 +1,335 @@
+.landing {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+
+.landing--img {
+  --img-size: 400px;
+  position: absolute;
+  left: 35%;
+  transform: translateX(-50%);
+  width: var(--img-size);
+  height: var(--img-size);
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s;
+}
+
+.landingContainerLeft {
+  flex: 35%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background-color: var(--primary);
+}
+
+.lcl--content {
+  margin: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.landing--social {
+  font-size: 35px;
+  margin: 0 1rem;
+  transition: transform 0.5s;
+  color: rgb(39, 39, 39);
+}
+
+.landing--social:hover {
+  transform: scale(1.2);
+}
+
+.landingContainerRight {
+  flex: 65%;
+  height: 100%;
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: var(--black);
+  /* background-color: red; */
+  /* margin-left: -100px; */
+}
+
+.landingContent {
+  width: 45%;
+  margin-right: 7rem;
+  font-family: var(--primaryFont);
+  font-style: normal;
+  border-color: yellow;
+}
+
+.landingContent h6 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-bottom: -0.85rem;
+  opacity: 0.8;
+  color: rgb(193, 193, 193);
+  font-family: "Poppins", sans-serif;
+}
+
+.landingContent h1 {
+  font-weight: 600;
+  font-size: 3.25rem;
+  line-height: 110%;
+  margin: 1rem 0;
+  color: var(--light);
+  color: rgb(234, 234, 234);
+  font-family: var(--primaryFont);
+  font-family: "Poppins", sans-serif;
+}
+
+.landingContent p {
+  margin-top: 1.45rem;
+  font-weight: 500;
+  font-size: 1.15rem;
+  opacity: 0.7;
+  font-family: var(--primaryFont);
+  color: rgb(193, 193, 193);
+  font-family: "Poppins", sans-serif;
+}
+
+.landingContentButton {
+  margin-top: 2rem;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "var(--primaryFont)", sans-serif;
+}
+
+.download-btn {
+  background-color: var(--primary);
+  border-radius: 30px;
+  width: 150px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.3ms ease-out;
+  font-family: "Poppins", sans-serif;
+  border: none;
+}
+
+.download-btn:hover {
+  border: 3px solid rgb(234, 234, 234);
+  background-color: rgb(234, 234, 234);
+  background-color: rgb(39, 39, 39);
+  cursor: pointer;
+  color: #eaeaea;
+  transition: 0.3s ease-in;
+}
+
+.contact-btn {
+  background-color: rgb(39, 39, 39);
+  border-radius: 30px;
+  width: 150px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.3s ease-out;
+  font-family: "Poppins", sans-serif;
+  border: 3px solid var(--primary);
+  color: var(--primary);
+}
+.contact-btn:hover {
+  border: none;
+  background-color: #eaeaea;
+  color: rgb(39, 39, 39);
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  font-family: "Poppins", sans-serif;
+}
+@media (max-width: 1100px) {
+  .landing--img {
+    --img-size: 350px;
+  }
+  .lcl--content {
+    margin: 2rem;
+  }
+
+  .landingContent h6 {
+    font-size: 1.1rem;
+  }
+
+  .landingContent h1 {
+    font-size: 3rem;
+  }
+
+  .landingContent p {
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .landingContentButton {
+    margin-top: 1rem;
+    flex-direction: column;
+    width: 200px;
+    height: 120px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing--img {
+    --img-size: 300px;
+  }
+
+  .landing--social {
+    font-size: 30px;
+  }
+  .landingContent {
+    width: 60%;
+    margin-top: 10%;
+    margin-right: 6%;
+  }
+
+  .landingContentButton {
+    margin-top: 1rem;
+    flex-direction: column;
+    width: 200px;
+    height: 120px;
+    align-items: flex-start;
+  }
+  .landingContentButton button:nth-child(2) {
+    display: none;
+  }
+}
+@media (max-width: 740px) {
+  .landingContainer {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .landingContainerLeft {
+    flex: initial;
+    width: 100%;
+    height: 30%;
+  }
+  .landingContainerRight {
+    box-sizing: border-box;
+    /* padding: 0 2rem; */
+    flex: initial;
+    height: 70%;
+    width: 100%;
+    background-color: #eaeaea;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    margin-right: 20px;
+  }
+  .landingContent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0px 30px;
+  }
+  .landingContent > h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .landingContainer {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .landing--img {
+    --img-size: 200px;
+    left: 50%;
+    top: 30%;
+    border: 8px solid #eaeaea;
+    transform: translate(-50%, -50%);
+  }
+
+  .landing--social {
+    display: none;
+  }
+
+  .landingContent {
+    margin-top: 20%;
+    /* margin-right: initial; */
+    width: 100%;
+  }
+  .landingContent h6 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .landingContent h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .landingContent p {
+    font-size: 0.95rem;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .landingContentButton {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    overflow: hidden;
+    height: 150px;
+    margin-top: 20px;
+  }
+  .landingContentButton button {
+    margin-top: -20%;
+  }
+  .contact-btn {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .landingContent {
+    margin-top: 60px;
+    /* background-color: purple; */
+    margin-left: 20px;
+  }
+  .landingContent h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+@media (max-width: 370px) {
+  .landingContent {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+  .landing {
+    height: 100%;
+  }
+
+  .landing--img {
+    --img-size: 150px;
+    left: 50%;
+    top: 20%;
+  }
+}
